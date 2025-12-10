@@ -119,12 +119,12 @@ export function getProducts(): Product[] {
  * Get a single product by slug
  * @throws Error if product not found
  */
-export async function getProduct(slug: string): Promise<Product> {
+export function getProduct(slug: string): Product {
   const product = sampleProductsReviews[slug];
- 
+
   if (!product) {
     throw new Error(`Product not found: ${slug}`);
   }
- 
+
   return product;
 }
